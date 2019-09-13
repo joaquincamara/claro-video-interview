@@ -1,0 +1,19 @@
+@import "../../../../shared/styles/variables";
+
+.tags {
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 3px;
+
+  &:first-of-type,
+  &:last-of-type {
+    margin: 3px 0;
+  }
+
+  & > .tags__text {
+    font-family: $main-font;
+    font-size: 15px;
+    color: white;
+  }
+}

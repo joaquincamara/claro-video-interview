@@ -1,0 +1,48 @@
+@import "../../../../shared/styles/variables";
+
+.movie-card {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  height: 190px;
+  width: 290px;
+  background-size: cover;
+  background-repeat: none;
+  border-radius: 8px;
+  margin: 6px;
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s;
+  z-index: inherit;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px -6px rgba(#fff, 0.6);
+    z-index: 100;
+  }
+
+  & > .movie-card__title {
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 0 30px 7px;
+    color: #fff;
+    z-index: 10;
+  }
+
+  & > .movie-card__transparent-mask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 190px;
+    width: 290px;
+    border-radius: 8px;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 3%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    z-index: 9;
+  }
+}

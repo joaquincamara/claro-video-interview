@@ -1,0 +1,16 @@
+@import "shared/styles/variables";
+@import "shared/styles/normalize";
+@import "shared/styles/font-awesome.min.css";
+
+html {
+  background-color: $background-color;
+  font-family: "Open Sans";
+}
+
+.App {
+  & > .App__content {
+    box-sizing: border-box;
+    height: calc(100vh - 4em);
+    width: 100vw;
+  }
+}

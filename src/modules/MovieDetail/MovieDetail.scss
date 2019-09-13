@@ -1,0 +1,111 @@
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/variables";
+
+.movies-detail-view {
+  display: flex;
+  flex-direction: column;
+
+  & .movies-detail-view__content-section {
+    display: flex;
+    flex-direction: column;
+
+    @include large {
+      flex-direction: row;
+    }
+  }
+
+  & .movies-detail-view__vertical-image-container {
+    width: 500px;
+    display: none;
+
+    @include large {
+      display: block;
+    }
+  }
+
+  & .movies-detail-view__description {
+     font-family: $main-font;
+     color: $title-movie-etail;
+     font-size: 13px;
+     padding: 10px;
+
+     @include medium {
+      font-size: 16px;;
+    }
+  }
+
+  & .movies-detail-view__image {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 13px;
+    padding: 10px;
+
+    @include medium {
+      height: 500px;
+    }
+
+    @include large {
+      display: none;
+    }
+
+    & >.movies-detail-view__image__mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 200px;
+      width: 100%;
+      background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 3%,
+      rgba(0, 0, 0, 1) 100%
+    );
+
+    @include medium {
+      height: 500px;
+    }
+    }
+  }
+
+  & .movies-detail-view__image-vertical {
+    position: relative;
+    display: none;
+    box-sizing: border-box;
+    height: 200px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 13px;
+    padding: 10px;
+    background-position-x: center;
+
+    @include large {
+      height: 500px;
+
+      display: flex;
+    }
+
+    & >.movies-detail-view__image-vertical__mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 200px;
+      width: 100%;
+      background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 3%,
+      rgba(0, 0, 0, 1) 100%
+    );
+
+    @include large {
+      height: 500px;
+    }
+    }
+  }
+}

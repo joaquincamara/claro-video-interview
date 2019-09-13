@@ -1,0 +1,20 @@
+@import "../../../../shared/styles/variables";
+
+.info-tag {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+
+  & .info-tag__text {
+    display: flex;;
+    font-family: $main-font;
+    color: white;
+    font-size: 15px;
+  }
+
+  & > .info-tag__tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

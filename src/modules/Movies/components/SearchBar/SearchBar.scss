@@ -1,0 +1,52 @@
+@import '../../../../shared/styles/variables';
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 280px;
+  height: 30px;
+  box-sizing: border-box;
+  background-color: #FFF;
+  border-radius: 5px;
+
+  & > .search-bar__input {
+    height: 1em;
+    width: calc(100% - 2em);
+    border: none;
+    outline: none;
+    padding: 0 0 0 4px;
+  }
+  
+
+  & > .search-bar__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 100%;
+    color: #FFF;
+    background-color: $claro-red;
+    transition: background-color 0.4;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+    
+
+    &:hover {
+      background-color: rgba($claro-red, 0.9);
+    }
+  }
+
+  & > .search-bar__clear {
+    position: absolute;
+    display: none;
+    top: 7px;
+    right: 2.2em;
+    color: $top-bar-background;
+    cursor: pointer;
+
+    &.show {
+      display: block;
+    }
+  }
+}

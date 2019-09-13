@@ -1,0 +1,38 @@
+.movies-list {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  & > .movies-list__container {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+}
+
+.movies-list__empty-movies {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  & > .movies-list__empty-movies__message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 2em;
+
+    & [class^="fa"] {
+      font-size: 4em;
+    }
+  }
+}

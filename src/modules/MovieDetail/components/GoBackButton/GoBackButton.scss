@@ -1,0 +1,20 @@
+@import "../../../../shared/styles/variables";
+
+.go-back {
+  display: flex;
+  padding: 6px;
+  cursor: pointer;
+  text-decoration: none;
+
+  & > .go-back__text {
+    color: $title-movie-etail;
+    font-family: $main-font;
+    font-size: 1.25rem;
+    margin: 0.2em;
+  }
+
+  & > .go-back__icon {
+    color: $title-movie-etail;
+    font-size: 2rem;
+  }
+}
